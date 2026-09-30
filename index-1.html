@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>أكاديمية مِنان للقرآن الكريم</title>
+<meta name="description" content="أكاديمية مِنان لتعليم وتحفيظ القرآن الكريم وعلومه أونلاين">
+<style>
+:root{
+  --purple:#7f4ba4; --deep:#56326f; --soft:#f7eafa; --pink:#e9b9dc;
+  --ink:#49365a; --muted:#75677d; --white:#fff; --line:#eadff0;
+  --shadow:0 18px 45px rgba(91,55,111,.12); --radius:28px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Tahoma","Arial",sans-serif;background:#fffdfd;color:var(--ink);line-height:1.8}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid #f0e8f2}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--deep);font-size:20px}
+.logo{width:46px;height:46px;border-radius:16px;background:linear-gradient(145deg,#9c65bb,#6c3d8b);display:grid;place-items:center;color:white;font-size:24px;box-shadow:0 8px 20px rgba(111,62,143,.2)}
+nav{display:flex;gap:24px;align-items:center;font-size:14px;color:#5f5068}
+nav a:hover{color:var(--purple)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 24px;font-weight:800;cursor:pointer;transition:.2s}
+.btn-primary{background:linear-gradient(135deg,#9258b1,#6d3d8b);color:white;box-shadow:0 10px 25px rgba(111,62,143,.22)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-light{background:white;color:var(--deep);border:1px solid var(--line)}
+.hero{position:relative;overflow:hidden;padding:76px 0 58px;background:
+ radial-gradient(circle at 15% 20%,#f3dff2 0,transparent 32%),
+ radial-gradient(circle at 90% 20%,#f8e9f6 0,transparent 28%),
+ linear-gradient(135deg,#fff,#fbf4fc)}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#efd8ee;opacity:.55;filter:blur(1px)}
+.hero:before{width:260px;height:260px;left:-100px;bottom:-130px}
+.hero:after{width:220px;height:220px;right:-90px;top:-100px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
+.kicker{color:#9a5bad;font-weight:800;margin-bottom:8px}
+h1{font-size:clamp(34px,5vw,60px);line-height:1.2;color:#59356d;margin-bottom:18px}
+.hero p{font-size:19px;color:#6c5c74;max-width:650px;margin-bottom:24px}
+.pill{display:inline-block;background:#f1dff0;color:#684477;border-radius:999px;padding:7px 18px;margin-bottom:20px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-card{background:rgba(255,255,255,.82);border:1px solid #f0e1f1;border-radius:36px;padding:24px;box-shadow:var(--shadow);position:relative}
+.quran-scene{height:350px;border-radius:28px;background:linear-gradient(145deg,#f8eaf8,#ead5eb);display:grid;place-items:center;overflow:hidden;position:relative}
+.quran{width:190px;height:130px;background:linear-gradient(145deg,#714187,#4e2a5e);border-radius:12px 18px 10px 8px;transform:rotate(-7deg);box-shadow:0 20px 35px rgba(71,42,84,.25);display:grid;place-items:center;color:#eecf8b;font-size:28px}
+.quran:after{content:"القرآن الكريم";border:2px solid #dcb66d;padding:8px 12px;border-radius:8px}
+.beads{position:absolute;bottom:40px;right:50px;width:190px;height:22px;border-top:4px dotted #9c5eb4;transform:rotate(12deg)}
+.lantern{position:absolute;top:35px;left:42px;font-size:72px;filter:drop-shadow(0 8px 8px rgba(75,45,90,.12))}
+section{padding:78px 0}
+.section-title{text-align:center;margin-bottom:38px}
+.section-title span{color:#a35ab9;font-weight:800}
+.section-title h2{font-size:34px;color:#5b386e;margin:5px 0}
+.section-title p{color:var(--muted)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature,.program,.price{background:white;border:1px solid var(--line);box-shadow:var(--shadow);border-radius:24px}
+.feature{padding:22px;text-align:center}
+.icon{width:54px;height:54px;margin:0 auto 10px;border-radius:18px;background:var(--soft);display:grid;place-items:center;font-size:25px}
+.feature h3{font-size:17px;margin-bottom:3px}.feature p{font-size:13px;color:var(--muted)}
+.about{background:linear-gradient(180deg,#fff,#faf3fb)}
+.about-box{display:grid;grid-template-columns:.85fr 1.15fr;gap:35px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:34px;padding:34px;box-shadow:var(--shadow)}
+.about-art{min-height:280px;border-radius:26px;background:linear-gradient(145deg,#f2def2,#fff);display:grid;place-items:center;font-size:100px}
+.about-text h2{color:#6b3c81;font-size:31px;margin-bottom:12px}
+.about-text p{color:#66576d;margin-bottom:15px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:9px;color:#5d4967}
+.programs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.program{padding:24px}
+.program h3{color:#653b7b;margin:10px 0}.program p{color:var(--muted);font-size:14px}
+.pricing{background:linear-gradient(135deg,#faf0fa,#fff)}
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:auto}
+.price{padding:22px;text-align:center}
+.price.highlight{border:2px solid #c98bd1;transform:translateY(-7px)}
+.price h3{color:#603771}.lessons{font-size:14px;color:var(--muted)}
+.amount{font-size:32px;font-weight:900;color:#7a4594;margin:7px 0}
+.currency{font-size:13px;color:#8b7791}
+.note{margin-top:22px;text-align:center;color:#77677d;font-size:14px}
+.cta{padding:68px 0}
+.cta-box{background:linear-gradient(135deg,#75428f,#9b60b1);color:#fff;border-radius:34px;padding:48px;text-align:center;box-shadow:0 20px 50px rgba(101,55,126,.22)}
+.cta-box h2{font-size:34px;margin-bottom:8px}.cta-box p{opacity:.9;margin-bottom:22px}
+.cta .btn-light{background:#fff;border:0}
+footer{padding:28px 0;background:#3f2b4c;color:#eee;text-align:center;font-size:13px}
+footer strong{color:#fff}
+@media(max-width:900px){
+ .hero-grid,.about-box{grid-template-columns:1fr}
+ .features{grid-template-columns:repeat(2,1fr)}
+ .programs{grid-template-columns:repeat(2,1fr)}
+ .prices{grid-template-columns:repeat(2,1fr)}
+ nav{display:none}
+}
+@media(max-width:520px){
+ .nav{height:68px}.brand{font-size:16px}.logo{width:40px;height:40px}
+ .hero{padding-top:48px}.hero p{font-size:16px}section{padding:55px 0}
+ .features,.programs,.prices{grid-template-columns:1fr}
+ .price.highlight{transform:none}.about-box{padding:20px}
+ .cta-box{padding:34px 20px}.cta-box h2{font-size:27px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home"><span class="logo">م</span><span>أكاديمية مِنان</span></a>
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#programs">برامجنا</a>
+      <a href="#pricing">الباقات</a>
+      <a href="#faq">الأسئلة الشائعة</a>
+    </nav>
+    <a class="btn btn-primary" href="#contact">تواصلي معنا</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">🌸 مرحبًا بكم في</div>
+      <h1>أكاديمية مِنان<br>للقرآن الكريم</h1>
+      <p>معًا نزرع في قلوب أطفالنا حب القرآن، ونسير بخطوات هادئة وممتعة نحو الحفظ والفهم والعمل.</p>
+      <span class="pill">تعليم شرعي مميز · بأسلوب بسيط ممتع</span>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">📱 سجلي الآن</a>
+        <a class="btn btn-light" href="#pricing">شاهدي الباقات</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="quran-scene">
+        <div class="lantern">🏮</div>
+        <div class="quran"></div>
+        <div class="beads"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+<div class="container">
+  <div class="features">
+    <div class="feature"><div class="icon">📖</div><h3>معلمات مؤهلات</h3><p>خبرة واهتمام بالتعليم والمتابعة</p></div>
+    <div class="feature"><div class="icon">⭐</div><h3>متابعة مستمرة</h3><p>مراجعة وتشجيع وتقارير دورية</p></div>
+    <div class="feature"><div class="icon">♡</div><h3>بيئة آمنة ومحفزة</h3><p>أسلوب لطيف يناسب الأطفال</p></div>
+    <div class="feature"><div class="icon">💻</div><h3>أونلاين بالكامل</h3><p>من أي مكان وبمواعيد منضبطة</p></div>
+  </div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+  <div class="about-box">
+    <div class="about-art">📖<br>🌸</div>
+    <div class="about-text">
+      <h2>من نحن؟</h2>
+      <p>أكاديمية مِنان هي منصة تعليمية إلكترونية متخصصة في تعليم القرآن الكريم وعلومه للأطفال والنساء، نسعى فيها لبناء جيل محب لكتاب الله، متمسك بقيمه وآدابه.</p>
+      <p>نقدم رحلة تعليمية تجمع بين الأصالة والتيسير، وبأسلوب شيق وممتع مع متابعة مستمرة.</p>
+      <div class="checks">
+        <div>✓ حفظ ومراجعة</div><div>✓ تجويد بفهم سلس</div>
+        <div>✓ تفسير ميسر</div><div>✓ آداب إسلامية للأطفال</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="programs">
+<div class="container">
+  <div class="section-title"><span>🌿 برامجنا</span><h2>رحلة متكاملة مع القرآن</h2><p>اختاري ما يناسبك أو يناسب طفلك</p></div>
+  <div class="programs">
+    <div class="program"><div class="icon">🧠</div><h3>حفظ ومراجعة</h3><p>متابعة دقيقة وتشجيع مستمر لبناء عادة ثابتة مع القرآن.</p></div>
+    <div class="program"><div class="icon">📚</div><h3>القرآن الكريم</h3><p>تحفيظ وتلقين مناسب للأطفال والنساء مع مراعاة مستوى الطالب.</p></div>
+    <div class="program"><div class="icon">✨</div><h3>التجويد</h3><p>فهم سلس للقواعد مع تطبيق عملي أثناء التلاوة.</p></div>
+    <div class="program"><div class="icon">🏡</div><h3>الآداب الإسلامية</h3><p>غرس القيم والآداب الإسلامية بأسلوب قريب ومحبب للأطفال.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="pricing" id="pricing">
+<div class="container">
+  <div class="section-title"><span>💜 الباقات</span><h2>اختاري الباقة المناسبة</h2><p>الحلقات فردية، ومدة الحلقة 30 دقيقة</p></div>
+  <div class="prices">
+    <div class="price"><h3>الباقة الأولى</h3><div class="lessons">4 حلقات</div><div class="amount">200</div><div class="currency">جنيه مصري</div></div>
+    <div class="price"><h3>الباقة الثانية</h3><div class="lessons">8 حلقات</div><div class="amount">400</div><div class="currency">جنيه مصري</div></div>
+    <div class="price highlight"><h3>الباقة الثالثة</h3><div class="lessons">16 حلقة</div><div class="amount">800</div><div class="currency">جنيه مصري</div></div>
+    <div class="price"><h3>الباقة الرابعة</h3><div class="lessons">20 حلقة</div><div class="amount">1000</div><div class="currency">جنيه مصري</div></div>
+    <div class="price"><h3>الباقة الخامسة</h3><div class="lessons">24 حلقة</div><div class="amount">1200</div><div class="currency">جنيه مصري</div></div>
+  </div>
+  <p class="note">🎁 الحصة التجريبية المجانية متاحة حسب المواعيد. توجد باقات وأسعار خاصة للمقيمين خارج مصر.</p>
+</div>
+</section>
+
+<section id="faq">
+<div class="container">
+  <div class="section-title"><span>💬 الأسئلة الشائعة</span><h2>أسئلة قبل الاشتراك؟</h2></div>
+  <div class="programs">
+    <div class="program"><h3>هل الحلقات فردية؟</h3><p>نعم، كل حلقة فردية لضمان التركيز والمتابعة المناسبة لكل طالب.</p></div>
+    <div class="program"><h3>كم مدة الحلقة؟</h3><p>30 دقيقة، ويمكن أن تزيد أو تنقص حسب رغبة الطالب والاتفاق.</p></div>
+    <div class="program"><h3>هل يوجد تفسير؟</h3><p>نعم، يمكن تقديم التفسير الميسر بما يناسب عمر ومستوى الطالب.</p></div>
+    <div class="program"><h3>كيف أسجل؟</h3><p>اضغطي على زر التواصل وأرسلي لنا بياناتك والباقة التي ترغبين بها.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="cta" id="contact">
+<div class="container">
+  <div class="cta-box">
+    <h2>جاهزة نبدأ رحلة القرآن؟ 🌸</h2>
+    <p>من تريد الاشتراك تتواصل معنا خاص، وسنساعدك في اختيار الباقة المناسبة.</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn btn-light" href="https://wa.me/201041147907?text=السلام%20عليكم،%20أرغب%20في%20الاشتراك%20مع%20أكاديمية%20مِنان" target="_blank" rel="noopener">💬 تواصلي عبر واتساب</a>
+      <a class="btn btn-light" href="https://www.facebook.com/share/19mJoKou9b/" target="_blank" rel="noopener">💙 تواصلي عبر فيسبوك / ماسنجر</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="container">🌸 <strong>أكاديمية مِنان للقرآن الكريم وعلومه</strong> — معًا نرتقي 🌸</div>
+</footer>
+</body>
+</html>
